@@ -1,0 +1,4 @@
+0 0 * * * /mnt/mmc01/wrk/scripts/cleanup.sh 14 delete >> /mnt/mmc01/log/cleanup.log 2>&1
+0 4 * * * /mnt/mmc01/wrk/scripts/ntpd_sync.sh >> /mnt/mmc01/log/ntpd.log 2>&1
+*/15 * * * * /mnt/mmc01/wrk/scripts/send_diskspace_stats.sh >/dev/null 2>&1
+*/5 * * * * /mnt/mmc01/wrk/scripts/send_memory_stats.sh >/dev/null 2>&1
